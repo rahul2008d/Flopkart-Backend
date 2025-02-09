@@ -8,7 +8,7 @@ const authRouter = require("./routes/auth/auth-route");
 const uploadImageRouter = require("./routes/admin/product-route");
 
 mongoose
-  .connect("mongodb+srv://rahul2008d:aacd1134@cluster0.vg8gj.mongodb.net/")
+  .connect(process.env.DATABASE_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
